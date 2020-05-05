@@ -15,6 +15,11 @@ header {
 
 .logo-img {
     margin-right: 420px;
+    margin-left: 20px;
+}
+
+.logo-img-white {
+    display: none;
 }
 
 nav {
@@ -37,3 +42,156 @@ nav a {
     text-decoration: none;
     color: rgb(24, 24, 24);
 }
+
+nav a:hover {
+    color: purple;
+}
+
+@media only screen and (max-width: 840px) {
+    nav li {
+        padding: 10px 10px;
+    }
+}
+
+/* night mode */
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode {
+    position: absolute;
+    top: 30px;
+    right: 30%;
+}
+
+.dark-mode .checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.dark-mode .label {
+    box-sizing: border-box;
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(0.8);
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
+}
+
+.dark-mode .label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.dark-mode .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* dark mode victims */
+
+body.dark {
+    background: black url(img/bg.jpg) center top no-repeat;
+    background-color: #292c35;
+}
+
+body.dark nav li {
+    border-top: solid 1px rgb(255, 255, 255);
+    border-bottom: solid 1px rgb(255, 255, 255);
+}
+
+body.dark .andy {
+    background-color: #292c35;
+}
+
+body.dark .ab {
+    background-color: rgb(29, 31, 43);
+    color: white;
+}
+
+body.dark .con-con {
+    background-color: rgb(29, 31, 43);
+}
+
+body.dark .pera p {
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 31, 43);
+}
+
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark a {
+    color: white;
+}
+
+body.dark .home h1,
+body.dark .home h3,
+body.dark .home h5 {
+    color: rgb(29, 31, 43);
+    background-color: rgba(170, 170, 170, 0.822);
+    padding: 8px;
+}
+
+body.dark .bout {
+    background-color: rgb(29, 31, 43);
+}
+/*
+body.dark .con-nav li {
+    background-color: rgb(29, 31, 43);
+}
+*/
+
+body.dark .maply {
+    background-color: #292c35;
+}
+
+body.dark .info {
+    background-color: #292c35;
+}
+
+body.dark .title {
+    background-color: rgb(29, 31, 43);
+}
+
+body.dark .boby {
+    background-color: #292c35;
+}
+
+body.dark .logo-img-black {
+    display: none;
+}
+
+body.dark .logo-img-white {
+    display: inline-block;
+}
+
+/* /dark mode victims */
